@@ -1,0 +1,33 @@
+﻿<Window x:Class="BoletosDesktop.Boletos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Crear Boleto" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="ID de Evento:"/>
+        <ComboBox Grid.Row="1" x:Name="idEventoComboBox" DisplayMemberPath="eventoId" SelectedValuePath="eventoId"/>
+
+        <Label Grid.Row="2" Content="Cantidad de Boletos:"/>
+        <TextBox Grid.Row="3" x:Name="cantidadBoletosTextBox"/>
+
+        <Label Grid.Row="6" Content="Tipo de Asiento:"/>
+        <TextBox Grid.Row="7" x:Name="tipoAsientoTextBox" Margin="0,0,0,-18"/>
+
+        <Label Grid.Row="4" Content="Precio:"/>
+        <TextBox Grid.Row="5" x:Name="precioTextBox"/>
+
+
+
+        <Button Grid.Row="7" Content="Guardar" Click="GuardarBoletoButton_Click" Margin="0,55,0,-94"/>
+    </Grid>
+</Window>

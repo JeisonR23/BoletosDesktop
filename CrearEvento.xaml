@@ -1,0 +1,34 @@
+﻿<Window x:Class="BoletosDesktop.CrearEventos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Crear Evento" Height="450" Width="800"
+        xmlns:local="clr-namespace:BoletosDesktop">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Nombre del Evento:"/>
+        <TextBox Grid.Row="1" x:Name="nombreEventoTextBox" Text="{Binding NombreEvento, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:CrearEventos}}"/>
+
+        <Label Grid.Row="2" Content="Descripción:"/>
+        <TextBox Grid.Row="3" x:Name="descripcionTextBox" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Descripcion, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:CrearEventos}}"/>
+
+        <Label Grid.Row="4" Content="Fecha:"/>
+        <DatePicker Grid.Row="5" x:Name="fechaDatePicker" SelectedDate="{Binding Fecha, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:CrearEventos}}"/>
+
+        <Label Grid.Row="6" Content="Ubicación:"/>
+        <TextBox Grid.Row="7" x:Name="ubicacionTextBox" Text="{Binding Ubicacion, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:CrearEventos}}"/>
+
+        <Button Grid.Row="8" Content="Guardar" Click="CrearEventoButton_Click"/>
+    </Grid>
+</Window>
